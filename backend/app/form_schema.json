@@ -1,0 +1,51 @@
+{
+  "steps": [
+    {
+      "step": 1,
+      "title": "Aadhaar Verification",
+      "description": "Enter your Aadhaar Number and Name as per Aadhaar.",
+      "fields": [
+        {
+          "name": "aadhaarNumber",
+          "label": "Aadhaar Number",
+          "type": "text",
+          "placeholder": "Enter 12 Digit Aadhaar Number",
+          "required": true,
+          "validation": {
+            "regex": "^[2-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$",
+            "errorMessage": "Please enter a valid 12-digit Aadhaar number."
+          }
+        },
+        {
+          "name": "nameAsPerAadhaar",
+          "label": "Name as per Aadhaar",
+          "type": "text",
+          "placeholder": "Enter Name as per Aadhaar Card",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "errorMessage": "Name is required."
+          }
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "PAN Verification",
+      "description": "Enter your PAN to continue.",
+      "fields": [
+        {
+          "name": "panNumber",
+          "label": "PAN Number",
+          "type": "text",
+          "placeholder": "Enter 10 Digit PAN Number",
+          "required": true,
+          "validation": {
+            "regex": "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+            "errorMessage": "Please enter a valid 10-digit PAN number."
+          }
+        }
+      ]
+    }
+  ]
+}
